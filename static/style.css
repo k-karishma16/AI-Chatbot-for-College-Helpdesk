@@ -1,47 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI College Helpdesk Chatbot</title>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
+/* Background */
+body {
+    background: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-<div class="chat-container">
+/* Chat Container */
+.chat-container {
+    width: 450px;
+    height: 700px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
-    <!-- Header -->
-    <div class="chat-header">
-        <h2>🎓 AI College Helpdesk Chatbot</h2>
-        <p>Your smart college assistant</p>
-    </div>
+/* Header */
+.chat-header {
+    background: #3f51b5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-    <!-- Chat Messages -->
-    <div id="chat-box" class="chat-box">
-        <div class="bot-message">
-            Hello! 👋 I am your AI college assistant. Ask me anything about fees, exams, library, placements, etc.
-        </div>
-    </div>
+.chat-header h2 {
+    margin-bottom: 5px;
+}
 
-    <!-- Input Area -->
-    <div class="chat-input-area">
-        <input
-            type="text"
-            id="user-input"
-            placeholder="Type your question..."
-        >
+.chat-header p {
+    font-size: 14px;
+}
 
-        <button onclick="sendMessage()">Send</button>
+/* Chat Box */
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #eef2f7;
+    display: flex;
+    flex-direction: column;
+}
 
-        <button onclick="startVoice()" class="mic-btn">🎤</button>
+/* Bot Message */
+.bot-message {
+    background: white;
+    color: black;
+    padding: 12px 15px;
+    border-radius: 15px;
+    margin: 8px 0;
+    max-width: 75%;
+    border: 1px solid #ddd;
+    align-self: flex-start;
+}
 
-        <button onclick="clearChat()" class="clear-btn">🗑</button>
-    </div>
+/* User Message */
+.user-message {
+    background: #3f51b5;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 15px;
+    margin: 8px 0;
+    max-width: 75%;
+    align-self: flex-end;
+    text-align: right;
+}
 
-</div>
+/* Typing Bubble */
+.typing-message {
+    background: white;
+    color: gray;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    width: fit-content;
+}
 
-<script src="/static/script.js"></script>
+/* Input Area */
+.chat-input-area {
+    display: flex;
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #ddd;
+}
 
-</body>
-</html>
+/* Input */
+.chat-input-area input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+
+/* Buttons */
+.chat-input-area button {
+    margin-left: 8px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Send Button */
+.chat-input-area button:first-of-type {
+    background: #3f51b5;
+}
+
+/* Mic Button */
+.mic-btn {
+    background: #ff4081;
+}
+
+/* Clear Button */
+.clear-btn {
+    background: #ff5722;
+}
+
+/* Hover */
+button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .chat-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
