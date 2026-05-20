@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI College Helpdesk Chatbot</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="chat-container">
+
+    <!-- Header -->
+    <div class="chat-header">
+        <h2>🎓 AI College Helpdesk Chatbot</h2>
+        <p>Your smart college assistant</p>
+    </div>
+
+    <!-- Chat Messages -->
+    <div id="chat-box" class="chat-box">
+        <div class="bot-message">
+            Hello! 👋 I am your AI college assistant. Ask me anything about fees, exams, library, placements, etc.
+        </div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="chat-input-area">
+        <input
+            type="text"
+            id="user-input"
+            placeholder="Type your question..."
+        >
+
+        <button onclick="sendMessage()">Send</button>
+
+        <button onclick="startVoice()" class="mic-btn">🎤</button>
+
+        <button onclick="clearChat()" class="clear-btn">🗑</button>
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
